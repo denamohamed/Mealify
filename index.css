@@ -1,0 +1,628 @@
+/* shared*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+}
+.center {
+    text-align: center;
+}
+.italic{
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    padding-block: 20px;
+    padding-inline: 10px;
+}
+.text {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+.heading-one{
+    color: var(--black-color);
+    font-size: 65px;
+    font-weight: 700;
+}
+.heading-two {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    font-family: 'Amatic SC', sans-serif;
+}
+.heading-three{
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+.footer-heading{
+    font-size: 22px;
+    font-weight: 800;
+    padding-block: 15px;
+    font-family: 'Inter', sans-serif;
+}
+.font-amatic {
+    font-family: 'Amatic SC', sans-serif;
+}
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --red-color: #ce1212;
+    --black-color:#212529;
+    --grey-color:#7f7f90;
+    --white-color:#ffffff;
+    --light-color:#747474;
+    --background:#EEEEEE;
+}
+.red{
+    color: var(--red-color);
+}
+.grey{
+    color: var(--grey-color);
+}
+.white{
+    color: var(--white-color);
+}
+.blak{
+    color: var(--black-color);
+}
+h1::selection,
+h2::selection,
+h3::selection,
+p::selection{
+  background-color: #D85454;
+}
+/* navbar */
+
+nav.navbar {
+    background-color: var(--white-color);
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0px 0px 14px 0px #0000001b;
+}
+
+nav.navbar div.nav {
+    display: flex;
+    margin-inline: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 80px;
+    padding-inline: 52px;
+}
+
+nav.navbar div.nav div.nav-list {
+    display: flex;
+}
+nav.navbar div.nav div.nav-list i{
+    display: none;
+}
+
+nav.navbar div.nav div.nav-list ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+nav.navbar div.nav div.nav-list ul li a {
+    text-decoration: none;
+    color: var(--light-color);
+    font-size: 17px;
+    font-weight: 600px;
+    position: relative;
+}
+/* navbar hover and has target */
+
+nav.navbar div.nav div.nav-list ul li a:hover {
+    color: #000000;
+}
+
+nav.navbar div.nav div.nav-list ul li a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    margin-bottom: -6px;
+    background-color: var(--red-color);
+}
+
+body:has(div.home-body:target) ul li a.home-link::after, 
+body:has(div.chefs:target) ul li a.chefs-link::after,
+body:has(div.gallary:target) ul li a.gallary-link::after,
+body:has(div.contact:target) ul li a.contact-link::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    margin-bottom: -6px;
+    background-color: var(--red-color);
+}
+
+nav.navbar div.nav div.mode input {
+    display: none;
+}
+nav.navbar div.nav div.mode label i {
+    font-size: 30px;
+}
+
+/* home section */
+
+div.home div.home-body {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--background);
+}
+
+div.home div.home-body div.body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin-inline: auto;
+    width: 85%;
+    justify-content: space-between;
+}
+div.home div.home-body div.body div.one{
+    width: 40%;
+    padding-top: 50px;
+}
+div.home div.home-body div.body div.one button.btn {
+    border-radius: 5px 40px 40px;
+    padding: 15px 30px;
+    background-color: var(--red-color);
+    border: none;
+    color: var(--white-color);
+    font-size: 15px;
+    margin-right: 20px;
+    transition: 0.4s background-color;
+}
+div.home div.home-body div.body div.one button.btn:hover {
+    background-color: red;
+}
+div.home div.home-body div.body div.one button.btn2 {
+    padding: 15px 30px;
+    color: #000000;
+    border: none;
+    font-size: 15px;
+    transition: 0.4s color;
+}
+div.home div.home-body div.body div.one button.btn2:hover {
+    color: red;
+}
+div.home div.home-body div.body div.one button.btn2 div{
+    background-color: var(--white-color);
+    border-radius: 50%;
+    padding: 15px 15px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+div.home div.home-body div.body div.two{
+    width: 40%;
+}
+div.home div.home-body div.body div.one p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #4f4f5a;
+    line-height: 26px;
+    margin-block: 25px;
+}
+
+div.home div.home-body div.body div.two img{
+  width: 100%;
+  padding-right: 20px;
+  padding-top: 40px;
+  filter: drop-shadow(10px 15px 10px gray);
+  display: block;
+}
+@keyframes shake {
+    0% {
+        transform: translate(0) rotate(0);
+    }
+
+    25% {
+        transform: translate(-2px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translate(0px) rotate(1deg);
+    }
+
+    75% {
+        transform: translate(2px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translate(0) rotate(0);
+    }
+}
+
+div.home div.home-body div.body div.two img:hover {
+    animation: shake 0.45s infinite;
+}
+
+/* chefs section */
+
+div.chefs div.container {
+    width: 80%;
+    margin-inline: auto;
+    padding-top: 70px;
+}
+
+div.chefs div.container div.sections {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+div.chefs div.container div.sections div.sec {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #b0b0b0;
+    width: calc(100%/3 - 25px);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s;
+}
+div.chefs div.container div.sections div.sec img{
+    width: 100%;
+    display: block;
+}
+
+div.chefs div.container div.sections div.sec div.hide{
+    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    top: 30px;
+    right: 10px;
+    background-color: var(--white-color);
+    border: none;
+    z-index: 7777;
+    opacity:0.3 ;
+    border-radius: 5px;
+    transform: translateX(200%);
+    transition: transform 0.8s;
+}
+
+div.chefs div.container div.sections div.sec div.hide i{
+    font-size: 22px;
+    padding-inline: 15px;
+    padding-block: 15px;
+}
+
+div.chefs div.container div.sections div.sec:hover div.hide {
+    transform: translateX(0);
+}
+
+div.chefs div.container div.sections div.sec:hover{
+    transform: scale(1.08);
+}
+
+  
+  /* gallary section */
+
+div.gallary {
+    margin-top: 60px;
+    padding-block: 50px;
+    background-color: #EEEEEE;
+}
+
+div.gallary div.container-img{
+width: 80%;
+margin-inline: auto;
+}
+
+div.gallary div.container-img div.images {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    height: 1300px;
+    --gap: 30px;
+    row-gap: var(--gap);
+}
+div.gallary div.container-img div.images div.content {
+    border: #FFFFFF 5px solid;
+    height: fit-content;
+    width: calc(calc(100% - var(--gap) * 2) / 3);
+    position: relative;
+    overflow: hidden;
+}
+div.gallary div.container-img div.images div div.hidden-layer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    border: none;
+    transform: translatey(100%);
+    transition: transform 0.45s;
+    z-index: 7777;
+}
+div.gallary div.container-img div.images div div.hidden-layer div.write{
+    text-align: center;
+    border: none;
+    width: 100%;
+}
+div.gallary div.container-img div.images div div.hidden-layer div.write p.head{
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFFFFF;
+    padding-block: 15px;
+}
+div.gallary div.container-img div.images div div.hidden-layer div.write p.normal{
+    color: #dddddd;
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+
+div.gallary div.container-img div.images div:hover div.hidden-layer{
+    transform: translatey(0);
+}
+div.gallary div.container-img div.images div:hover img{
+    transform: scale(1.2);
+}
+div.gallary div.container-img div.images div img {
+    width: 100%;
+    display: block;
+    transition: transform 400ms;
+}
+
+/* contact section */
+
+
+div.contact {
+    margin-block: 80px;
+}
+
+div.contact div.container div.map {
+    width: 80%;
+    margin-inline: auto;
+}
+
+div.contact div.container div.map iframe {
+    width: 100%;
+    height: 400px;
+}
+
+div.contact div.container div.sections {
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.contact div.container div.sections div.one {
+    width: calc(100%/2 - 10px);
+    background-color: #EEEEEE;
+    margin-top: 20px;
+}
+
+div.contact div.container div.sections div.one div.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "icon main main main"
+    "icon para para para"
+
+}
+div.contact div.container div.sections div.one div div.icon{
+    grid-area: icon;
+    text-align: center;
+    font-size: 25px;
+
+}
+div.contact div.container div.sections div.one div div.icon div.bg{
+    background-color: var(--red-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-inline: auto;
+    transform: translateY(60%);
+}
+
+div.contact div.container div.sections div.one div div.icon i{
+    color: var(--white-color);
+    transform: translateY(50%);
+
+}
+
+div.contact div.container div.sections div.one div div.main{
+    grid-area: main;
+}
+div.contact div.container div.sections div.one div div.para{
+    grid-area: para;
+}
+div.contact div.container div.sections div.one div div.para span{
+    color: #000000;
+    font-weight: bold;
+}
+
+div.contact div.form{
+    width: 80%;
+    margin-inline: auto;
+    margin-block: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 18px 0px #0000001b;
+}
+div.contact div.form form{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+div.contact div.form form input.name{
+    width: calc(100%/2 - 10px);
+    height: 50px;
+    border: 2px solid #d5d4d4;
+    padding-left: 15px;
+    outline: none;
+
+}
+div.contact div.form form input.subject{
+    width: 100%;
+    height: 50px;
+    border: 2px solid #d5d4d4;
+    padding-left: 15px;
+    outline: none;
+
+}
+
+div.contact div.form form textarea{
+    width: 100%;
+    height: 150px;
+    border: 2px solid #d5d4d4;
+    padding-left: 15px;
+    padding-top: 15px;
+    outline: none;
+    resize:vertical;
+
+}
+div.contact div.form form input:focus,div.contact div.form form textarea:focus{
+    border: 4px solid #ce1212;
+}
+
+div.contact div.form form button{
+    margin-inline: auto;
+    border-radius: 77px;
+    padding-block: 15px;
+    padding-inline: 40px;
+    border: none;
+    background-color: var(--red-color);
+    color: #FFFFFF;
+    font-size: 15px;
+}
+
+/* footer section */
+
+
+footer{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(./images/textured-metal-background.jpg);
+    background-repeat: repeat;
+    background-size: 50%;
+    --gap : 20px;
+}
+footer div.container{
+    width: 85%;
+    padding-block: 40px;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    color: #FFFFFF;
+    justify-content: space-between;
+}
+footer div.container div.one ,
+footer div.container div.three{
+    width: calc(calc(100% - var(--gap) * 2) / 4);
+}
+footer div.container div.two{
+    width: calc(calc(100% - var(--gap) * 2) / 2);
+}
+footer div.container div.one hr{
+    width: 100%;
+}
+
+footer div.container div.one div.part-one{
+    display: flex;
+    gap: 15px;
+    padding-bottom: 15px;
+}
+footer div.container div.one div.part-one img{
+    width: 40px;
+}
+footer div.container div.one div.part-three{
+    margin-block: 15px;
+    text-align: center;
+}
+footer div.container div.one div.part-three ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer div.container div.one div.part-three ul li i{
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+footer div.container div.two div.part-one p{
+  margin-block: 20px;
+}
+footer div.container div.two div.part-two input{
+    width: 80%;
+    height: 40px;
+    border: 2px solid #d5d4d4;
+    padding-left: 15px;
+    outline: none;
+    margin-bottom: 15px;
+}
+footer div.container div.two div.part-two button{
+    width:17%; 
+    padding-block: 13.5px;
+    background-color: var(--red-color);
+    color: var(--white-color);
+    border: var(--red-color) ;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+footer div.container div.two div.part-three div{ 
+    display: flex;
+}
+footer div.container div.two div.part-three ul{
+    width: 50%;
+    list-style: none;
+}
+footer div.container div.two div.part-three ul span{
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+footer div.container div.two div.part-three ul li{
+    margin-block: 10px;
+    transition: transform 1s;
+}
+footer div.container div.two div.part-three ul li:hover{
+    transform: translateX(10%);
+    background-color: rgba(113, 113, 113, 0.4);
+    width: 70%;
+}
+
+footer div.container div.three ul{
+    padding-left: 10px;
+    list-style: none;
+    margin-top: 20px;
+}
+footer div.container div.three ul li{
+    padding-block: 10px;
+}
+footer div.container div.three ul i{
+    font-size: 27px;
+    color: var(--red-color);
+    padding-right: 10px;
+    transform: translateY(5px);
+}

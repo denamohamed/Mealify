@@ -1,0 +1,185 @@
+@media only screen and (max-width: 992px)
+ {
+
+    nav.navbar div.nav div.nav-list {
+        flex-flow: column wrap;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        width: 150px;
+        background-color: white;
+    }
+    nav.navbar div.nav div.nav-list ul{
+        text-align: center;
+    }
+
+    nav.navbar div.nav div.nav-list ul li{
+        width: 100%;
+    }
+
+    div.home div.home-body {
+    height: fit-content;
+    }
+    div.home div.home-body div.body {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-inline: auto;
+    width: 80%;
+    height: fit-content;
+
+}
+
+    
+div.home div.home-body div.body div.one{
+    width: 100%;
+    height: 40%;
+    padding-top: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+div.home div.home-body div.body div.two{
+    width: 100%;
+    height: 60%;
+    margin-top: 100px;
+}
+
+div.home div.home-body div.body div.two img{
+    width: 700px;
+    height: 700px;
+    margin-inline: auto;
+    padding: 0;
+
+}
+div.chefs div.container div.sections {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 40px;
+}
+div.chefs div.container div.sections div.sec {
+    width: calc(100%/2 - 25px);
+
+}
+div.gallary div.container-img div.images {
+    height: 1450px;
+    display: flex;
+    flex-flow: column wrap;
+    --gap: 20px;
+    row-gap: var(--gap);
+
+}
+div.gallary div.container-img div.images div.content {
+    width: calc(calc(100% - var(--gap) * 2) / 2);
+
+}
+
+div.contact div.form form input.name{
+    width: 100%;
+}
+ 
+
+footer div.container div.three{
+    width: calc(calc(100% - var(--gap) * 2) / 2);
+    order: 5;
+
+}
+footer div.container div.one{
+    width: calc(calc(100% - var(--gap) * 2) / 2);
+    order: 3;
+}
+
+footer div.container div.two{
+    width: calc(calc(100% - var(--gap) * 2));
+    order: 10;
+}
+
+}
+
+
+@media only screen and (max-width: 768px) 
+{          
+    div.home div.home-body div.body div.two{
+        margin-top: 160px;
+    }
+    
+    div.home div.home-body div.body div.two img{
+        width: 550px;
+        height: 550px;    
+    }
+    div.chefs div.container div.sections {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    div.chefs div.container div.sections div.sec {
+        width: calc(100% - 25px);
+        margin-inline: auto;
+    
+    }
+    div.gallary div.container-img div.images {
+        height: 3700px;
+        --gap: 20px;
+        row-gap: var(--gap);
+    
+    }
+    div.gallary div.container-img div.images div.content {
+        width: calc(calc(100% - var(--gap) * 2) / 1);
+    
+    }
+    
+    div.contact div.form form input.name{
+        width: 100%;
+    }
+
+    div.contact div.container div.map {
+        width: 90%;
+        margin-inline: auto;
+    }
+    div.contact div.container div.sections {
+        width: 90%;
+        margin-inline: auto;
+    }
+    
+    div.contact div.container div.sections div.one {
+        width: calc(100% - 10px);
+        height: 100px;
+    }
+    
+    div.contact div.form{
+        width: 90%;
+        margin-inline: auto;
+    }
+        
+
+    footer div.container div.three{
+        width: calc(calc(100% - var(--gap) * 2) );
+        order: 5;
+    
+    }
+    footer div.container div.one{
+        width: calc(calc(100% - var(--gap) * 2));
+        order: 3;
+    }
+    
+    footer div.container div.two{
+        width: calc(calc(100% - var(--gap) * 2));
+        order: 10;
+    }
+    
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    div.home div.home-body div.body div.two img{
+        width: 400px;
+        height: 400px;    
+    }
+
+}
+
+
+
+
